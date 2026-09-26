@@ -33,12 +33,7 @@ export default function LoginScreen({ navigation }) {
 
 
 
-      <TouchableOpacity style = {styleko.buttonstyleDashboard}
-        // onPress={() => { navigation.navigate("Dashboard", { inputl })}}
-        onPress = {ifvalnoval}
-      >
-        <Text style={styleko.title}>Go to Dashboard</Text>
-      </TouchableOpacity>
+
     </View>
   );
 }

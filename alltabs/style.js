@@ -21,23 +21,20 @@ export const styleko = StyleSheet.create({
     color: "#666",
   },
   buttonstylelogin: {
-    paddingVertical: 1,
-    paddingHorizontal: 10,
-    backgroundColor: "#1eaae1",
-    borderRadius: 3,
+    backgroundColor: "#108de0",
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 20,
+    alignItems: "center",
   },
     buttonstylesignin: {
-    paddingVertical: 1,
-    paddingHorizontal: 10,
-    backgroundColor: "#24e182",
-    borderRadius: 3,
+    backgroundColor: "#4CAF50",
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 20,
+    alignItems: "center",
   },
-    buttonstyleDashboard: {
-    paddingVertical: 1,
-    paddingHorizontal: 10,
-    backgroundColor: "#ee7001",
-    borderRadius: 3,
-  },
+
 
   Navigationstyle: {
     flex: 1,
@@ -45,21 +42,7 @@ export const styleko = StyleSheet.create({
     
   },
 
-  card: {
-    width: 250,
-    height: 300,
-    backgroundColor: "#3498db",
-    alignItems: "center",
-    justifyContent: "center",
-    backfaceVisibility: "hidden",
-    borderRadius: 10,
-    padding: 10,
-  },
-  cardBack: {
-    backgroundColor: "#2ecc71",
-    position: "absolute",
-    top: 0,
-  },
+
   titledashboard: {
     fontSize: 18,
     fontWeight: "bold",
@@ -78,5 +61,35 @@ export const styleko = StyleSheet.create({
     fontSize: 16,
     color: "#fff",
     marginTop: 10,
-  }
+  },
+
+
+
+
+
+    input: {
+    borderWidth: 1,
+    borderColor: "#ccc",
+    padding: 10,
+    marginVertical: 10,
+    borderRadius: 5,
+  },
+  addBtn: {
+    backgroundColor: "#4CAF50",
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 20,
+    alignItems: "center",
+  },
+  addText: { color: "#fff", fontWeight: "bold" },
+  itemRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: "#eee",
+  },
+  itemText: { fontSize: 16 },
+  itemDone: { textDecorationLine: "line-through", color: "gray" },
+  deleteBtn: { fontSize: 18, color: "red" },
 });
