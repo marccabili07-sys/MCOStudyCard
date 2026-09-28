@@ -93,6 +93,7 @@ import {
   Platform,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { styleko } from "./style.js";
 
 const cards = [
   {
@@ -132,14 +133,14 @@ const cards = [
 
 function Card({ item }) {
   return (
-    <View style={styles.card}>
-      <Text style={styles.cardText}>
+    <View style={styleko.card}>
+      <Text style={styleko.cardText}>
         {item.text}{" "}
         {item.answer ? (
           <Text
             style={[
-              styles.answer,
-              item.type === "true" && styles.trueAnswer,
+              styleko.answer,
+              item.type === "true" && styleko.trueAnswer,
             ]}
           >
             {item.answer}
@@ -147,7 +148,7 @@ function Card({ item }) {
         ) : null}
       </Text>
 
-      <Pressable style={styles.cardMenu} hitSlop={10}>
+      <Pressable style={styleko.cardMenu} hitSlop={10}>
         <Ionicons name="ellipsis-vertical" size={21} color="#10192d" />
       </Pressable>
     </View>
@@ -160,29 +161,29 @@ export default function Dashboard({route, navigation }) {
 
 
   return (
-    <SafeAreaView style={styles.safe}>
+    <SafeAreaView style={styleko.safe}>
       <StatusBar barStyle="dark-content" backgroundColor="#f8fafc" />
 
-      <View style={styles.screen}>
+      <View style={styleko.screen}>
 
 
         {/* Top navigation */}
-        <View style={styles.topBar}>
-          <Pressable style={styles.circleButton} onPress={() => alert("This section is not yet Ready!")}>
+        <View style={styleko.topBar}>
+          <Pressable style={styleko.circleButton} onPress={() => alert("This section is not yet Ready!")}>
             <Ionicons name="chevron-back" size={20} color="#10192d" />
           </Pressable>
 
-          <View style={styles.topActions}>
-            {/* <Pressable style={styles.circleButton}>
+          <View style={styleko.topActions}>
+            {/* <Pressable style={styleko.circleButton}>
               <Ionicons name="share-outline" size={20} color="#10192d" />
             </Pressable> */}
-            <Pressable style={styles.circleButton} onPress={() => alert("This section is not yet Ready!")}>
+            <Pressable style={styleko.circleButton} onPress={() => alert("This section is not yet Ready!")}>
               <Ionicons name="search-outline" size={20} color="#10192d" />
             </Pressable>
-            <Pressable style={styles.circleButton} onPress={() => alert("This section is not yet Ready!")}>
+            <Pressable style={styleko.circleButton} onPress={() => alert("This section is not yet Ready!")}>
               <Ionicons name="bookmark" size={20} color="#10192d" />
             </Pressable>
-            <Pressable style={styles.circleButton} onPress={() => alert("This section is not yet Ready!")}>
+            <Pressable style={styleko.circleButton} onPress={() => alert("This section is not yet Ready!")}>
               <Ionicons name="ellipsis-horizontal" size={20} color="#10192d" />
             </Pressable>
           </View>
@@ -190,46 +191,46 @@ export default function Dashboard({route, navigation }) {
 
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={styles.scrollContent}
+          contentContainerStyle={styleko.scrollContent}
         >
           {/* Deck heading */}
-          <View style={styles.deckHeading}>
-            <View style={styles.aquaSquare} />
-            <Text style={styles.deckTitle}>LONG TEST REVIEWER</Text>
+          <View style={styleko.deckHeading}>
+            <View style={styleko.aquaSquare} />
+            <Text style={styleko.deckTitle}>LONG TEST REVIEWER</Text>
           </View>
 
-          <View style={styles.authorPill}>
-            <View style={styles.avatar}>
-              <Text style={styles.avatarEmoji}>ð¦</Text>
+          <View style={styleko.authorPill}>
+            <View style={styleko.avatar}>
+              <Text style={styleko.avatarEmoji}>ð¦</Text>
             </View>
-            <Text style={styles.byText}>by </Text>
-            <Text style={styles.authorName}>{inputl}</Text>
+            <Text style={styleko.byText}>by </Text>
+            <Text style={styleko.authorName}>{inputl}</Text>
           </View>
 
           {/* Tabs */}
-          <View style={styles.tabs}>
-            <Pressable style={styles.activeTab}>
-              <Text style={styles.activeTabText}>Cards</Text>
+          <View style={styleko.tabs}>
+            <Pressable style={styleko.activeTab}>
+              <Text style={styleko.activeTabText}>Cards</Text>
             </Pressable>
-            <Pressable style={styles.tab} onPress={() => alert("This section is not yet Ready!")}>
-              <Text style={styles.tabText}>Notes</Text>
+            <Pressable style={styleko.tab} onPress={() => alert("This section is not yet Ready!")}>
+              <Text style={styleko.tabText}>Notes</Text>
             </Pressable>
-            <Pressable style={styles.tab} onPress={() => alert("This section is not yet Ready!")}>
-              <Text style={styles.tabText} onPress={() => alert("This section is not yet Ready!")}>Lessons</Text>
+            <Pressable style={styleko.tab} onPress={() => alert("This section is not yet Ready!")}>
+              <Text style={styleko.tabText} onPress={() => alert("This section is not yet Ready!")}>Lessons</Text>
             </Pressable>
-            <Pressable style={styles.tab} onPress={() => alert("This section is not yet Ready!")}>
-              <Text style={styles.tabText}>Imports</Text>
+            <Pressable style={styleko.tab} onPress={() => alert("This section is not yet Ready!")}>
+              <Text style={styleko.tabText}>Imports</Text>
             </Pressable>
-            <Pressable style={styles.tab} onPress={() => alert("This section is not yet Ready!")}>
-              <Text style={styles.tabText}>Leaderboard</Text>
+            <Pressable style={styleko.tab} onPress={() => alert("This section is not yet Ready!")}>
+              <Text style={styleko.tabText}>Leaderboard</Text>
             </Pressable>
           </View>
 
-          <View style={styles.divider} />
+          <View style={styleko.divider} />
 
           {/* Card heading */}
-          <View style={styles.cardsHeader}>
-            <Text style={styles.cardsTitle}>Cards (8)</Text>
+          <View style={styleko.cardsHeader}>
+            <Text style={styleko.cardsTitle}>Cards (8)</Text>
             <Pressable>
               <Ionicons name="swap-vertical" size={26} color="#18223a" />
             </Pressable>
@@ -244,213 +245,11 @@ export default function Dashboard({route, navigation }) {
         </ScrollView>
 
         {/* Bottom floating button */}
-        <Pressable style={styles.studyButton}>
-          <Text style={styles.gamepad}>ð®</Text>
-          <Text style={styles.studyText}>Study deck</Text>
+        <Pressable style={styleko.studyButton}>
+          <Text style={styleko.gamepad}>ð®</Text>
+          <Text style={styleko.studyText}>Study deck</Text>
         </Pressable>
       </View>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  safe: {
-    flex: 1,
-    backgroundColor: "#f8fafc",
-  },
-  screen: {
-    flex: 1,
-    backgroundColor: "#f8fafc",
-  },
-  topBar: {
-    height: 90,
-    paddingHorizontal: 46,
-    paddingVertical: 12,
-    paddingTop: Platform.OS === "ios" ? 18 : 18,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  topActions: {
-    alignItems: "Right",
-    flexDirection: "row",
-    gap: 14,
-  },
-  circleButton: {
-    width: 74,
-    height: 74,
-    borderRadius: 40,
-    backgroundColor: "#ffffff",
-    borderWidth: 1.5,
-    borderColor: "#aabada",
-    alignItems: "center",
-    justifyContent: "center",
-    shadowColor: "#000",
-    shadowOpacity: 0.025,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 3 },
-    elevation: 1,
-  },
-  scrollContent: {
-    paddingHorizontal: 45,
-    paddingBottom: 40,
-  },
-  deckHeading: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginTop: 34,
-    marginBottom: 28,
-  },
-  aquaSquare: {
-    width: 49,
-    height: 49,
-    borderRadius: 13,
-    backgroundColor: "#00d254",
-    marginRight: 25,
-  },
-  deckTitle: {
-    fontSize: 30,
-    lineHeight: 44,
-    fontWeight: "800",
-    letterSpacing: -1.2,
-    color: "#111a2f",
-  },
-  authorPill: {
-    alignSelf: "flex-start",
-    minHeight: 70,
-    paddingLeft: 22,
-    paddingRight: 30,
-    borderRadius: 44,
-    borderWidth: 1.5,
-    borderColor: "#416193",
-    backgroundColor: "#fff",
-    flexDirection: "row",
-    alignItems: "center",
-    marginBottom: 48,
-  },
-  avatar: {
-    width: 58,
-    height: 58,
-    borderRadius: 30,
-    backgroundColor: "#f1f5f9",
-    alignItems: "center",
-    justifyContent: "center",
-    marginRight: 16,
-  },
-  avatarEmoji: {
-    fontSize: 25,
-  },
-  byText: {
-    fontSize: 25,
-    color: "#68748a",
-    fontWeight: "600",
-  },
-  authorName: {
-    fontSize: 27,
-    color: "#172039",
-    fontWeight: "800",
-  },
-  tabs: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  tab: {
-    paddingVertical: 12,
-    paddingHorizontal: 3,
-  },
-  activeTab: {
-    paddingVertical: 12,
-    paddingHorizontal: 3,
-  },
-  activeTabText: {
-    fontSize: 20,
-    fontWeight: "800",
-    color: "#151e33",
-  },
-  tabText: {
-    fontSize: 18,
-    fontWeight: "700",
-    color: "#68758d",
-  },
-  divider: {
-    height: 1,
-    backgroundColor: "#e4e8ed",
-    marginTop: 30,
-    marginBottom: 49,
-  },
-  cardsHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 18,
-  },
-  cardsTitle: {
-    fontSize: 29,
-    fontWeight: "800",
-    color: "#131c31",
-  },
-  card: {
-    minHeight: 174,
-    borderRadius: 42,
-    borderWidth: 1.5,
-    borderColor: "#e1e5ea",
-    backgroundColor: "#fff",
-    marginBottom: 27,
-    paddingTop: 34,
-    paddingBottom: 31,
-    paddingLeft: 47,
-    paddingRight: 62,
-    justifyContent: "center",
-    shadowColor: "#000",
-    shadowOpacity: 0.018,
-    shadowRadius: 5,
-    shadowOffset: { width: 0, height: 2 },
-    elevation: 1,
-  },
-  cardText: {
-    fontSize: 25,
-    lineHeight: 35,
-    color: "#19233a",
-    fontWeight: "500",
-    letterSpacing: -0.25,
-  },
-  answer: {
-    fontWeight: "800",
-    color: "#14203a",
-  },
-  trueAnswer: {
-    backgroundColor: "#d9f7e6",
-  },
-  cardMenu: {
-    position: "absolute",
-    top: 26,
-    right: 25,
-  },
-  studyButton: {
-    position: "absolute",
-    left: 45,
-    right: 45,
-    bottom: 26,
-    height: 96,
-    borderRadius: 52,
-    backgroundColor: "#111a30",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    shadowColor: "#000",
-    shadowOpacity: 0.15,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 7 },
-    elevation: 8,
-  },
-  gamepad: {
-    fontSize: 32,
-    marginRight: 18,
-  },
-  studyText: {
-    fontSize: 29,
-    fontWeight: "800",
-    color: "#fff",
-  },
-});
