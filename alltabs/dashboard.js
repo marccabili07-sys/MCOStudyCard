@@ -83,14 +83,13 @@
 
 import React from "react";
 import { SafeAreaView } from 'react-native-safe-area-context';
+
 import {
   View,
   Text,
-  StyleSheet,
   ScrollView,
   Pressable,
   StatusBar,
-  Platform,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { styleko } from "./style.js";
@@ -253,3 +252,4 @@ export default function Dashboard({route, navigation }) {
     </SafeAreaView>
   );
 }
+// console.log(Platform.OS);
