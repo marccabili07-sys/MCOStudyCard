@@ -1,5 +1,5 @@
 
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 export const styleko = StyleSheet.create({
   container: {
@@ -123,7 +123,7 @@ export const styleko = StyleSheet.create({
 
 
 
-    safe: {
+  safe: {
     flex: 1,
     backgroundColor: "#f8fafc",
   },
